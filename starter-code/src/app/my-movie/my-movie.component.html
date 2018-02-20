@@ -1,0 +1,37 @@
+<h3 class="col-sm-12"><small>Room {{movie.room}}</small> {{movie.title}}</h3>
+<img [src]="movie.poster" class="col-sm-4 img-responsive space-bottom" />
+<div class="col-sm-8">
+  <div class="space-bottom row">
+    <span class="col-sm-2 title">Genres</span>
+    <div class="col-sm-10">
+      <span class="clearfix" *ngFor="let genre of movie.genres">{{genre}}</span>
+    </div>
+  </div>
+  <div class="space-bottom row">
+    <span class="col-sm-2 title">Year</span>
+    <span class="col-sm-10">{{movie.year}}</span>
+  </div>
+  <div class="space-bottom row">
+    <span class="col-sm-2 title">Director</span>
+    <span class="col-sm-10">{{movie.director}}</span>
+  </div>
+  <div class="space-bottom row">
+    <span class="col-sm-2 title">Actors</span>
+    <div class="col-sm-10">
+      <span class="clearfix" *ngFor="let actor of movie.actors">{{actor}}</span>
+    </div>
+  </div>
+  <div class="space-bottom row">
+    <span class="col-sm-2 title">Schedule</span>
+    <div class="col-sm-10">
+      <span class="clearfix" *ngFor="let hour of movie.hours">{{hour}}</span>
+    </div>
+  </div>
+  <div class="row">
+    <span class="col-sm-12 title space-bottom">Synopsis</span>
+    <p class="col-sm-12">{{movie.synopsis}}</p>
+  </div>
+</div>
+<div class="col-sm-12">
+  <a class="btn btn-primary" [routerLink]="['/home']">Home</a>
+</div>

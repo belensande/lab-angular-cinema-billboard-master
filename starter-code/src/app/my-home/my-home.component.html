@@ -1,0 +1,5 @@
+<div class="col-sm-2 centered" [ngClass]="{'col-sm-offset-1': first}" *ngFor="let movie of movies; let first = first" >
+  <h4>ROOM {{movie.room}}</h4>
+  <img [src]="movie.poster" class="center-cropped"/>
+  <a [routerLink]="['/movie', movie.id]">{{movie.title}}</a>
+</div>
